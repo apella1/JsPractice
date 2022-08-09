@@ -35,6 +35,17 @@ console.log(languages);
 // gets the index of the array element
 console.log(languages.indexOf("Tibetan"));
 
+// defining new array using constructor and adding elements to the array 
+
+let vehicles = new Array ("Car", "Lorry");
+vehicles.push("Train");
+vehicles.unshift("Luxury vehicles");
+
+// getting the index of specific element in the vehicles array 
+
+console.log(vehicles.indexOf("Train"));
+
+console.log(vehicles);
 
 // object literals
 
@@ -57,10 +68,21 @@ console.log(person.address, person.firstName);
 
 console.log(person.hobbies[3]);
 
-// destructuring
+// Destructuring. 
+// Can only be done once for the elements of the object and makes them available within the block
 
 const {firstName, lastName, address: {county}} = person;
 console.log(county);
+
+const {address:{constituency}} = person;
+
+console.log(constituency);
+
+const{hobbies, address:{ward}} = person;
+
+console.log(hobbies);
+console.log(hobbies[2]);
+console.log(ward);
 
 // adding properties to the object
 
@@ -112,7 +134,8 @@ console.log(gameFootball[0].founder);
 console.log(gameFootball[2].wonChampionsLeague);
 
 
-// converting JSON files to a string
+// converting the file to a JSON file using the JSON.stringify method
+
 const gameFootballJSON = JSON.stringify(gameFootball);
 
 console.log(gameFootballJSON);
@@ -127,7 +150,13 @@ for(let i = 0; i < 12; i++) {
 
 
 // while loops
+// ! work on while loops 
 
+// let j = 0;
+// while (j = 0) {
+//     j+=;
+//     console.log(`While loop ${j}`);
+// }
 
 // looping through arrays
 

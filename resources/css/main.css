@@ -1,3 +1,7 @@
+body{
+    font-family: monospace;
+}
+
 .title { 
     display: flex;
     justify-content: center;
@@ -34,4 +38,31 @@
 .container { 
     display: flex;
     justify-content: center;
+}
+
+.my-items {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    background-color: #1d1da799;
+}
+
+.subtitle { 
+    text-align: center;
+    font-weight: 800;
+}
+
+.list { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    list-style: none;
+    padding: 1rem;
+}
+
+.content { 
+    display: flex;
+    justify-content: center;
+    font-size: large;
 }

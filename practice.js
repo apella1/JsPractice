@@ -1,23 +1,25 @@
 //defining variables 
+// the scope and binding of variable declaration with let, const and var 
+// let and const are local to the block they are declared in
+// var are declared globally 
 
 let todo1 = 1;
 let todo2 = "This is a variable containing a string";
-let todo3 = "hello";
 
 // javascript functions 
+// the below function is a declarative function where the function name is given and the parameters passed in
 
 function addTodo (todoName) { 
-    let element = document.createElement('div');
+    let element = document.createElement('div');  // creates a div element within the body of the markup
     element.innerText = todoName;
     document.body.appendChild(element);
 }
 
-    // calling functions 
+    // calling functions, also known as revoking functions 
         addTodo(todo1);
         addTodo(todo2);
-        addTodo(todo3);
 
-// arrays 
+// arrays can contain different data types within the same block.
 
 let todos = ["Magenta", "Portsmouth", 67, false, 98.433]
 
@@ -29,12 +31,19 @@ todos.pop();
 
 // rendering loops
 
-todos.forEach(function(todoTitle) { 
+todos.forEach(function (todoTitle) { 
     let element = document.createElement('div');
     element.innerText = todoTitle;
-    document.body.appendChild(element);
+    document.body.appendChild(element);                // appending elements to the body of the document 
 });
 
+
+todos.forEach( (todoTitle) => {
+    let element = document.createElement("div");
+    element.innerText = todoTitle;
+    document.body.appendChild(element);
+}
+); // this is the same function as the one above using the arrow function notation 
 
 // variable declaration
 
@@ -65,7 +74,7 @@ var firstName = "Peter";
 var lastName = "Johnson";
 var age = 33;
 var fullName = firstName + lastName;
-var myMessage = "My name is " + fullName + " and I am " + age + "years old.";
+var myMessage = "My name is " + fullName + " and I am " + age + "years old."; // the use of backticks is more efficient compared to the traditional method of string concatenation 
 
 
 //method two using backticks 
@@ -73,5 +82,5 @@ var myMessage = "My name is " + fullName + " and I am " + age + "years old.";
 var myMessage = `My name is ${fullName} and I am ${age} years old.`;
 console.log(myMessage);
 
-console.log(document.getElementsByTagName('h1'));
+console.log(document.getElementsByTagName('h1')); // displays the h1 elements selected 
 
