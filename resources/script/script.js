@@ -211,7 +211,7 @@ else {
 }
 
 
-// the ternary operator ?
+// the ternary operator?
 
 const b = 9;
 const color = b > 6 ? "indigo" : "gray";
@@ -229,10 +229,27 @@ switch (color) {
     console.log("Color is neither indigo or gray.")
 }
 
+// cases where the switch operator is used in real life code 
+
+const k = 7;
+const  prepareDinner = k <= 8 ? "Prepare dinner" : "No dinner today";
+
+switch (prepareDinner) {
+    case"Prepare dinner":
+    console.log("Today we are preparing dinner.");
+    break;
+    case"No dinner today":
+    console.log("There's no dinner for today.");
+    break;
+    default:
+    console.log("No decision has been made on dinner.");
+}
+
 
 // using switches
 
 // creating functions and calling functions
+// these are declarative functions 
 
 function numDiff (num1, num2, num3) {
     console.log(num1*(num2-num3));
@@ -355,6 +372,7 @@ else {
 }
 
 
+// formation of arrays with object literals as the array items. 
 const Students = [
     {
         id:1,

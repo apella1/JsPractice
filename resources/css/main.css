@@ -45,7 +45,6 @@ body{
     justify-content: center;
     align-items: center; */
     position: relative;
-    background-color: #1d1da799;
 }
 
 .subtitle { 
@@ -65,4 +64,26 @@ body{
     display: flex;
     justify-content: center;
     font-size: large;
+}
+
+.item {
+    color: blue;
+    padding: 3px;
+}
+
+.other-items {
+    display: grid;
+    place-items:center;
+}
+
+.lists {
+    list-style-type: none;
+}
+
+.other-subtitle {
+    color: red;
+}
+
+.items {
+    color: green;
 }
