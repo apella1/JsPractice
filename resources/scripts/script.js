@@ -71,7 +71,7 @@ console.log(person.hobbies[3]);
 // Destructuring. 
 // Can only be done once for the elements of the object and makes them available within the block
 
-const {firstName, lastName, address: {county}} = person;
+const {firstName, lastName, address: {county}} = person;  // * how destructuring is applied within react props 
 console.log(county);
 
 const {address:{constituency}} = person;
@@ -84,6 +84,15 @@ console.log(hobbies);
 console.log(hobbies[2]);
 console.log(ward);
 
+const results = {
+    subject: 'English Literature',
+    marks: 78,
+    grade: 'A'
+}
+
+
+const {subject, marks, grade} = results;
+console.log(subject); // prints out the subject within the object
 // adding properties to the object
 
 person.married = true;
@@ -123,15 +132,17 @@ const gameFootball = [
 
 console.log(gameFootball);
 
-// the first block brackets selects the item on the second index of the array and the second selects the third index item from clubName
+// * the first block brackets selects the item on the second index of the array and the second selects the third index item from clubName
 console.log(gameFootball[2].clubName[3]);
 
 
-console.log(gameFootball[1].founded);
+console.log(gameFootball[1].founded); // * returns 1997 for the founded property of the second object within the array i.e the object within the first index of the array 
 
 console.log(gameFootball[0].founder);
 
 console.log(gameFootball[2].wonChampionsLeague);
+
+console.log(gameFootball[0].clubNumber); // * returns the club number of the first object within the array 
 
 
 // converting the file to a JSON file using the JSON.stringify method

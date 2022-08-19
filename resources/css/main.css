@@ -3,6 +3,8 @@ body{
     background: linear-gradient(rgb(129, 129, 185), rgb(116, 85, 85));
 }
 
+/* ? What are the major background property features?  */
+
 .title { 
     text-align: center;
     margin:10px;
@@ -73,3 +75,5 @@ body{
         width:30vw;
     }
 }
+
+/* todo: practice more media queries and go through Bootstrap's code for inspiration */
