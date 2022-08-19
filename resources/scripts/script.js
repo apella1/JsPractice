@@ -411,6 +411,27 @@ const Students = [
     }
 ];
 
+// sorting through a list of objects within an array in alphabetical order 
+
+let sortedStudents = Students.sort();
+console.log(sortedStudents);
+
+sortedStudents.sort( function(a, b) { 
+    if (a.sortedStudents > b.sortedStudents) {
+        return 1
+    }
+
+    else if (a.sortedStudents < b.sortedStudents) {
+        return -1
+    }
+
+    else { 
+        return 0
+    }
+}
+
+)
+
 const notYear2 = Students.map( function (schoolYear) {
     return schoolYear.year !== 2
 }
