@@ -161,7 +161,7 @@ for(let i = 0; i < 12; i++) {
 
 
 // while loops
-// ! work on while loops 
+// todo: work on while loops 
 
 // let j = 0;
 // while (j = 0) {
@@ -182,24 +182,28 @@ for (let gameNow of gameFootball) {
     console.log(gameNow.id);
 }
 
+for (let game of gameFootball) { 
+    console.log(game.clubName);
+}
+
 // high order looping through arrays - forEach, map, filter
 
-gameFootball.forEach( function (games){
+gameFootball.forEach( (games) => {
     console.log(games);
 }
     );
 
 // using map
- const gameFootballFounders = gameFootball.map( function (gameFounders) {
+ const founders = gameFootball.map( (gameFounders) => {
     return gameFounders.founder;
  }
  );
 
-console.log(gameFootballFounders);
+console.log(founders);
 
 // using filter
 
-const gameFootballChampions = gameFootball.filter (function (champions) {
+const champions = gameFootball.filter ( (champions) => {
     return champions.wonChampionsLeague === true;
 }
 ).map (function (club) {
@@ -207,7 +211,7 @@ const gameFootballChampions = gameFootball.filter (function (champions) {
 }
     );
 
-console.log(gameFootballChampions); // mapping just the club name that has won champions league, that is, wonChampionsLeague === true
+console.log(champions); // mapping just the club name that has won champions league, that is, wonChampionsLeague === true
 
 
 // conditionals
@@ -222,7 +226,7 @@ else {
 }
 
 
-// the ternary operator?
+// the ternary operator ? :
 
 const b = 9;
 const color = b > 6 ? "indigo" : "gray";
@@ -255,6 +259,8 @@ switch (prepareDinner) {
     default:
     console.log("No decision has been made on dinner.");
 }
+
+// ? where switch cases are implemented to solve problems 
 
 
 // using switches
@@ -290,6 +296,14 @@ const client1 = new Client("Mary", "Bidet", "German", 22);
 
 console.log(client1);
 
+function Cars (brand, model) { 
+    this.brand = brand; 
+    this.model = model;
+}
+
+const car = new Cars("BMW", "M3");
+console.log(car);
+
 // creating a class
 
 class Person {
@@ -300,6 +314,16 @@ class Person {
     }
 }
 
+class Sport { 
+    constructor (name, country) {
+        this.name = name;
+        this.country = country;
+    }
+}
+
+const sport = new Sport ('Football', 'England');
+
+// ? difference between the function constructor and the class constructor
 // the local window object
 console.log(window);
 

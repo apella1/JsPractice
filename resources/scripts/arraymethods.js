@@ -67,8 +67,8 @@ console.log(citrus);
 
 // ! all javascript methods have .toString() method - this method converts the array into a string
 
-document.getElementById('array').innerHTML = animals.toString();
-document.getElementById('array').innerHTML = animals;   // ! both of these work the same way
+// document.getElementById('array').innerHTML = animals.toString();
+// document.getElementById('array').innerHTML = animals;   // ! both of these work the same way
 
 
 // sorting an array 
@@ -77,3 +77,119 @@ document.getElementById('array').innerHTML = animals;   // ! both of these work 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 numbers.reverse();
 console.log(numbers);
+
+
+// includes method 
+
+const hasSeven = numbers.includes(7);
+
+console.log(hasSeven);
+
+
+// filter method 
+
+const products = [
+    {
+        name: 'TV', 
+        price: 469
+    },
+    {
+        name: 'Washing machine', 
+        price: 2000
+    },
+    {
+        name: 'Adjustable table', 
+        price: 1050
+    },
+    {
+        name: 'Smart watch', 
+        price: 600
+    },
+    {
+        name: 'Peloton machine', 
+        price: 3500
+    },
+    {
+        name: 'Mobile phone', 
+        price: 700
+    },
+    {
+        name: 'Pen', 
+        price: 30
+    }
+
+];
+
+const filteredByPrice = products.filter( (product) => {
+    return product.price >= 700
+})
+
+console.log(filteredByPrice);
+
+// map method 
+
+const itemNames = products.map( (item) => {
+    return item.name
+ })
+
+ console.log(itemNames);
+
+ const itemPrices = products.map( (item) => {
+    return item.price
+ })
+
+ console.log(itemPrices);
+
+ // find method 
+
+ const itemFound = products.find( (item) => {
+    return item.name === 'Adjustable table'
+ })
+
+ console.log(itemFound);
+
+
+ // forEach
+
+products.forEach( (item) => {
+    console.log(item.name);
+})
+
+console.log(products);
+
+// some method. returns true if any of the item within the array matches any of the tested conditions within the defined functions 
+
+const hasPriceyProducts = products.some( (item) => { 
+    return item.price > 2000
+})
+
+console.log(hasPriceyProducts);
+
+// * every method. checks to see if every single element of the array matches the condition they are tested against
+
+const expensiveInventory = products.every( (item) => { 
+    return item.price >= 100 
+})
+
+console.log(expensiveInventory);
+
+// reduce method. takes in two parameters and works out the specified operations such as the sum
+
+const totalPrice = products.reduce( (currentTotal, product) => {
+    return currentTotal + product.price
+}, 0);
+
+console.log(totalPrice);
+
+
+
+const nameString = products.reduce( (item, product) => { 
+    return item + product.name
+}, '')
+
+console.log(nameString);   // * the strings are also combined. The second parameter is the one responsible for looping through each of the array components
+
+// includes method
+
+const hasTV = products.includes('TV');
+console.log(hasTV);
