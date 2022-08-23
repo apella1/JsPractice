@@ -8,6 +8,7 @@ const girlNames = ['May', 'June', 'Angela', 'Pauline'];
 
 const coolNames = ['Mike', 'Pam', 'LeBron', 'Jordan'];
 
+console.log(coolNames);
 // concatenating arrays - .concat()
 // joining two arrays 
 const allNames = girlNames.concat(boyNames);
@@ -24,10 +25,14 @@ console.log(superNames);
 // .join() - joins the array elements into a string
 const items = ['Item1', 'Item2', 'Item3'];
 
-document.querySelector('.item').innerHTML = items.join('~'); // ~ is the separator. querySelectorAll for all classes doesn't join for all th list elements with the class item
+items[items.length] = 'Item4'
+
+console.log(items);
+
+// document.querySelector('.item').innerHTML = items.join('~'); // ~ is the separator. querySelectorAll for all classes doesn't join for all th list elements with the class item
 
 // getting the index of an array 
-console.log(boyNames.indexOf('Paul')); // returns 2
+console.log(boyNames.indexOf('Paul'));  // returns 2
 
 
 
@@ -40,7 +45,9 @@ console.log(boyNames.indexOf('Paul')); // returns 2
 // an array of animal names
 const animals = ['Lion', 'Tiger', 'Bear', 'Dog', 'Cat'];
 
-animals.unshift('Elephant');
+animals.unshift('Elephant'); 
+
+animals.pop();
 
 console.log(animals);
 
@@ -76,6 +83,9 @@ console.log(citrus);
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 numbers.reverse();
+
+numbers.sort(); // sorts the array in ascending order based on the fist character e.g 243 comes before 90
+
 console.log(numbers);
 
 
@@ -124,7 +134,7 @@ const filteredByPrice = products.filter( (product) => {
     return product.price >= 700
 })
 
-console.log(filteredByPrice);
+console.log(filteredByPrice); 
 
 // map method 
 
