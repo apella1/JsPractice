@@ -4,7 +4,15 @@ const cars = ['Ford', 'Audi', 'BMW', 'Mercedes'];
 // an array of boy names
 const boyNames = ['John', 'Peter', 'Paul', 'Gladwell', 'Mandela'];
 
+boyNames.splice(3, 2);
+
+console.log(boyNames);
+
 const girlNames = ['May', 'June', 'Angela', 'Pauline'];
+
+const sliceGirls = girlNames.slice(0, 4);
+
+console.log(sliceGirls);
 
 const coolNames = ['Mike', 'Pam', 'LeBron', 'Jordan'];
 
@@ -47,7 +55,7 @@ const animals = ['Lion', 'Tiger', 'Bear', 'Dog', 'Cat'];
 
 animals.unshift('Elephant'); 
 
-animals.pop();
+animals.pop(); // removes cat from the list 
 
 console.log(animals);
 
@@ -59,9 +67,15 @@ console.log(animals);
 
 // array splice and slice methods
 const subjects = ['Math', 'English', 'History', 'Science', 'Art', 'Music'];
-subjects.splice(1, 5, 'PE'); // *the first number shows from which index the array is to be spliced, the second number shows how many elements are to be removed, the third number shows how many elements are to be added
+subjects.splice(1, 4, 'PE', 'SSD', 'KDD'); // *the first number shows from which index the array is to be spliced, the second number shows how many elements are to be removed, the third number shows how many elements are to be added
+
+// the first two numbers of the splice method show from which index we are starting to remove and from which we're ending. The values within the index boundaries are also included in the items that are removed from the array.  
 
 console.log(subjects);  
+
+const sliceSubjects = subjects.slice(2, 5);
+
+console.log(sliceSubjects);
 
 const tools = ['Hammer', 'Saw', 'Screwdriver', 'Pliers', 'Wrench'];
 tools.splice(0, 5); // * removes the first 5 elements from the array
@@ -159,6 +173,19 @@ const itemNames = products.map( (item) => {
  console.log(itemFound);
 
 
+ const itemPeloton = products.find ( (item) => { 
+    return item.name === 'Peloton machine'
+ }
+ )
+
+ console.log(itemPeloton);
+
+ const withPrice700 = products.find ((item) => { 
+    return item.price === 700;
+ })
+
+ console.log(withPrice700);
+
  // forEach
 
 products.forEach( (item) => {
@@ -167,13 +194,20 @@ products.forEach( (item) => {
 
 console.log(products);
 
-// some method. returns true if any of the item within the array matches any of the tested conditions within the defined functions 
+// * some method. returns true if any of the item within the array matches any of the tested conditions within the defined functions 
+// * the difference between the filter and the some method is that filter returns all the values that meet the condition whereas some returns a boolean. 
+// * if the conditions are met, some returns true otherwise false
 
 const hasPriceyProducts = products.some( (item) => { 
     return item.price > 2000
 })
 
+const priceyProducts = products.filter ( (item) => { 
+    return item.price > 2000
+})
+
 console.log(hasPriceyProducts);
+console.log(priceyProducts);
 
 // * every method. checks to see if every single element of the array matches the condition they are tested against
 
@@ -183,7 +217,7 @@ const expensiveInventory = products.every( (item) => {
 
 console.log(expensiveInventory);
 
-// reduce method. takes in two parameters and works out the specified operations such as the sum
+// * reduce method. takes in two parameters and works out the specified operations such as the sum
 
 const totalPrice = products.reduce( (currentTotal, product) => {
     return currentTotal + product.price

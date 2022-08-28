@@ -68,11 +68,14 @@ console.log(person.address, person.firstName);
 
 console.log(person.hobbies[3]);
 
-// Destructuring. 
+// * Destructuring arrays. 
 // Can only be done once for the elements of the object and makes them available within the block
 
 const {firstName, lastName, address: {county}} = person;  // * how destructuring is applied within react props 
 console.log(county);
+
+console.log(firstName);
+console.log(lastName);
 
 const {address:{constituency}} = person;
 
@@ -94,6 +97,9 @@ const results = {
 const {subject, marks, grade} = results;
 console.log(subject); // prints out the subject within the object
 // adding properties to the object
+
+console.log(marks);
+console.log(grade);
 
 person.married = true;
 
@@ -130,10 +136,55 @@ const gameFootball = [
     }
 ];
 
+// array methods practice 
+
+// * adding club numbers 
+
+const clubNumberSum = gameFootball.reduce ( (current, item) => { 
+    return current + item.clubNumber;
+}, 0)
+
+console.log(clubNumberSum);
+
+// * filtering clubs with id less than or equal to 4 and only giving out the club name
+
+const gameId = gameFootball.filter( (item)=> { 
+    return item.id <= 4 
+}).map((item) => {
+    return item.clubName;
+});
+
+console.log(gameId);
+
 console.log(gameFootball);
 
+
+// * checking if there is any club with id of 5
+
+const clubWithId5 = gameFootball.some( (item) => { 
+     return item.id === 5
+})
+
+console.log(clubWithId5);
+
+
+// * checking if every club was founded before 2000
+const earlyClub = gameFootball.every( (item => { 
+    return item.founded < 2000
+}))
+
+console.log(earlyClub);
+
+
+// * checking if the the array has 'Real' as a club name
+const hasReal = gameFootball.map( (item) => {
+    return item.clubName
+}).includes('Real');
+
+console.log(hasReal);
+
 // * the first block brackets selects the item on the second index of the array and the second selects the third index item from clubName
-console.log(gameFootball[2].clubName[3]);
+console.log(gameFootball[2].clubName);
 
 
 console.log(gameFootball[1].founded); // * returns 1997 for the founded property of the second object within the array i.e the object within the first index of the array 
@@ -146,6 +197,7 @@ console.log(gameFootball[0].clubNumber); // * returns the club number of the fir
 
 
 // converting the file to a JSON file using the JSON.stringify method
+// ? in which situations do we need to convert files to json files within the environment 
 
 const gameFootballJSON = JSON.stringify(gameFootball);
 
@@ -170,13 +222,14 @@ for(let i = 0; i < 12; i++) {
 // }
 
 // looping through arrays
+// * using for loops 
 
 for (let i = 0; i <= gameFootball.length; i++) {
     console.log(gameFootball[i])
 }
 
 
-// looping for of
+// * looping for of
 
 for (let gameNow of gameFootball) {
     console.log(gameNow.id);
@@ -184,6 +237,10 @@ for (let gameNow of gameFootball) {
 
 for (let game of gameFootball) { 
     console.log(game.clubName);
+}
+
+for (let founder of gameFootball) { 
+    console.log(founder.founder);
 }
 
 // high order looping through arrays - forEach, map, filter
@@ -225,8 +282,18 @@ else {
     console.log("V is not equal to  23");
 }
 
+switch(v) {
+    case 22: console.log('V is equal to 22');
+    break;
+    default: console.log('V is not equal to 22'); 
+    
+}
 
-// the ternary operator ? :
+const numeral = v === 22 ? 'Yes' : 'No';
+
+console.log(numeral);
+
+// the ternary operator ? : - has extensive usage within the react library
 
 const b = 9;
 const color = b > 6 ? "indigo" : "gray";
@@ -282,7 +349,7 @@ console.log(mySum(67,5));
 
 // object oriented programming
 
-// constructor function
+// * constructor function
 function Client (firstName, lastName, nativeLanguage, age) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -290,7 +357,7 @@ function Client (firstName, lastName, nativeLanguage, age) {
     this.age = age;
 }
 
-// instantiating an object
+// * instantiating an object
 
 const client1 = new Client("Mary", "Bidet", "German", 22);
 
@@ -305,6 +372,8 @@ const car = new Cars("BMW", "M3");
 console.log(car);
 
 // creating a class
+// how react interacts with javascript classes 
+// class Person extends React.Component - not sure what this computes to 
 
 class Person {
     constructor (firstName, lastName, dob) {
@@ -324,6 +393,7 @@ class Sport {
 const sport = new Sport ('Football', 'England');
 
 // ? difference between the function constructor and the class constructor
+// classes use the constructor keyword. Everything including the instantiation remains the same
 // the local window object
 console.log(window);
 
@@ -384,7 +454,7 @@ switch (meal) {
 
  console.log(idea1);
 
-//  constructor object
+//  constructor object - the use of declarative functions to create objects 
 
 function Planets (planetName, distanceAway, dateFormed) {
     this.planetName = planetName;

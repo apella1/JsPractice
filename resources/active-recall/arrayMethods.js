@@ -1,6 +1,6 @@
 const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 
-// sorting from the smallest to the larges
+// sorting from the smallest to the largest
 primeNumbers.sort();
 console.log(primeNumbers);
 
@@ -25,8 +25,12 @@ primeNumbers.unshift(1);
 // adding an element at the end of an array 
 primeNumbers.push(100);
 
+const names = ['agnes', 'Agnes'];
 
-const greekGods = ['Ares', 'Zeus', 'Poseidon', 'Hera', 'Apollo', 'Artemis', 'Athena', 'Aphrodite', 'Hermes', 'Hades', 'Hephaestus', 'Demeter', 'Dionysus', 'Ares', 'Zeus', 'Poseidon', 'Hera', 'Apollo', 'Artemis', 'Athena', 'Aphrodite', 'Hermes', 'Hades', 'Hephaestus', 'Demeter', 'Dionysus'];
+console.log(names.sort());
+
+
+const greekGods = ['Ares', 'Zeus', 'Poseidon', 'Hera', 'Apollo', 'Artemis', 'Athena', 'Aphrodite', 'Hermes', 'Hades', 'Hephaestus', 'Demeter', 'Dionysus', 'ares', 'zeus', 'poseidon', 'hera', 'apollo', 'artemis', 'athena', 'aphrodite', 'hermes', 'Hades', 'Hephaestus', 'Demeter', 'Dionysus'];
 
 console.log(greekGods.length);
 
@@ -39,6 +43,11 @@ console.log(greekGods.reverse());
 greekGods.forEach( (god) => {
     console.log(god.toUpperCase()); 
 })
+
+const lowGods = greekGods.forEach( (god) => {
+    god.toLowerCase()});
+
+console.log(lowGods);
 
 console.log(greekGods);
 
