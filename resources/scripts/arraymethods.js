@@ -16,6 +16,10 @@ console.log(sliceGirls);
 
 const coolNames = ['Mike', 'Pam', 'LeBron', 'Jordan'];
 
+const sliceCoolNames = coolNames.slice(1, 3);
+
+console.log(sliceCoolNames);
+
 console.log(coolNames);
 // concatenating arrays - .concat()
 // joining two arrays 
@@ -37,7 +41,15 @@ items[items.length] = 'Item4'
 
 console.log(items);
 
-// document.querySelector('.item').innerHTML = items.join('~'); // ~ is the separator. querySelectorAll for all classes doesn't join for all th list elements with the class item
+// const splicedItems = items.splice(1, 2);
+
+const slicedItems = items.slice(2, 4);
+
+console.log(slicedItems);
+
+// * slice starts from the defined index which is the first value within the braces then starts at index zero and moves towards the first defined index and then returns the values from that index to the last count.
+
+// document.querySelector('.item').innerHTML = items.join('~'); // ~ is the separator. querySelectorAll for all classes doesn't join for all the list elements with the class item
 
 // getting the index of an array 
 console.log(boyNames.indexOf('Paul'));  // returns 2
@@ -172,7 +184,6 @@ const itemNames = products.map( (item) => {
 
  console.log(itemFound);
 
-
  const itemPeloton = products.find ( (item) => { 
     return item.name === 'Peloton machine'
  }
@@ -224,8 +235,6 @@ const totalPrice = products.reduce( (currentTotal, product) => {
 }, 0);
 
 console.log(totalPrice);
-
-
 
 const nameString = products.reduce( (item, product) => { 
     return item + product.name
