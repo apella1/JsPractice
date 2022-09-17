@@ -25,7 +25,7 @@ console.log(Math.log(Math.E));
 // * javascript also used log10 to indicate a base of 10 as in normal mathematics 
 
 console.log(Math.log10(10));
-console.log(Math.log10(100000000000));
+console.log(Math.log10(100000000000)); 
 
 console.log(Math.sqrt(-1)); // js still has no support for imaginary numbers
 

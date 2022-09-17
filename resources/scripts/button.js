@@ -5,3 +5,4 @@ button.addEventListener('click', (e) => {
     console.log(e);
 })
 
+// todo go through the list of event listeners and see what they do
