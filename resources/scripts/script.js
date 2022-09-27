@@ -7,11 +7,11 @@ score = 7;
 
 const game = "Football";
 const average = 79.66;
-const haveScored = true;
+const hasScored = true;
 let x = null;
 let z = undefined;
 
-// use of backticks as opposed to the traditional way of concatenating strings
+// use of backticks for concatenating strings
 let myIntro = `I play ${game} and I have  an average score of ${average}`;
 
 console.log(game.substring(0, 4) .toUpperCase());
@@ -251,10 +251,10 @@ gameFootball.forEach( (games) => {
     );
 
 // using map
- const founders = gameFootball.map( (gameFounders) => {
+const founders = gameFootball.map( (gameFounders) => {
     return gameFounders.founder;
  }
- );
+);
 
 console.log(founders);
 
@@ -269,7 +269,6 @@ const champions = gameFootball.filter ( (champions) => {
     );
 
 console.log(champions); // mapping just the club name that has won champions league, that is, wonChampionsLeague === true
-
 
 // conditionals
 
@@ -328,7 +327,6 @@ switch (prepareDinner) {
 }
 
 // ? where switch cases are implemented to solve problems 
-
 
 // using switches
 
@@ -556,9 +554,7 @@ const studentPassed = Students.filter ( function (passed) {
 }
     );
 
-
 console.log(studentPassed);
-
 
 // looping for of
 
@@ -566,12 +562,9 @@ for (let studyYear of Students) {
     console.log(studyYear.year)
 }
 
-
 for (let exam of Students) {
     console.log(exam.passedExam)
 }
-
-
 
 const items = document.querySelectorAll('.item');
 items.forEach ((item) => console.log(item));
@@ -593,6 +586,4 @@ const myList = document.querySelector(".list");
 
 // const button = document.querySelector(".button");
 // button.style.background = "blue";
-
-
 // javascript eventsban

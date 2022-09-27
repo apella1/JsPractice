@@ -15,3 +15,6 @@ function withdraw (account, amount) {
 }
 
 console.log(withdraw(5000, 4000)); 
+
+// importance of javascript functions: code reusability, less coding thus less complexity of our programs 
+// ? javascript function methods 
