@@ -52,3 +52,4 @@ async function init() {
 init();
 
 // async await makes it easy to work with promises
+// javascript programs in web browsers are typically event driven, waiting for an action to be performed before a function is executed. 

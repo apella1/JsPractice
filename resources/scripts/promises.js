@@ -1,3 +1,5 @@
+// promises are objects that represent the not yet available results of an asynchronous operation
+
 const posts = [
     {
         title: 'Post one',
@@ -63,3 +65,5 @@ Promise.all([promise1, promise2, promise3]).then( (values) => {
 // ? using fetch api to make http requests 
 
 // * async / await
+// setTimeout runs once and forgets about the code. To write a function that updates regularly, setInterval is used instead
+// ? clearInterval
