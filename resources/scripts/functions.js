@@ -124,6 +124,7 @@ console.log(minus(4, 7));
 console.log(minus());
 
 // defaulting to a parameter when not defined 
+// the looping variant of defining a power function
 
 function power (base, exponent = 2) { 
     let result = 1;
