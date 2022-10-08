@@ -1,7 +1,7 @@
 //defining variables 
 // the scope and binding of variable declaration with let, const and var 
 // let and const are local to the block they are declared in
-// var are declared globally 
+// var is declared globally 
 
 let todo1 = 1;
 let todo2 = "This is a variable containing a string";
