@@ -21,6 +21,7 @@ const sliceCoolNames = coolNames.slice(1, 3);
 console.log(sliceCoolNames);
 
 console.log(coolNames);
+
 // concatenating arrays - .concat()
 // joining two arrays 
 const allNames = girlNames.concat(boyNames);

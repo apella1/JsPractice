@@ -14,7 +14,7 @@ let z = undefined;
 // use of backticks for concatenating strings
 let myIntro = `I play ${game} and I have  an average score of ${average}`;
 
-console.log(game.substring(0, 4) .toUpperCase());
+console.log(game.substring(0, 4).toUpperCase());
 
 console.log(game);
 
@@ -140,7 +140,7 @@ const gameFootball = [
 
 // * adding club numbers 
 
-const clubNumberSum = gameFootball.reduce ( (current, item) => { 
+const clubNumberSum = gameFootball.reduce((current, item) => { 
     return current + item.clubNumber;
 }, 0)
 
@@ -162,7 +162,7 @@ console.log(gameFootball);
 // * checking if there is any club with id of 5
 
 const clubWithId5 = gameFootball.some( (item) => { 
-     return item.id === 5
+    return item.id === 5
 })
 
 console.log(clubWithId5);
@@ -440,17 +440,17 @@ switch (meal) {
 
 // creating classes
 
- class Ideas {
+class Ideas {
     constructor (ideaName, value, tools) {
         this.ideaName = ideaName;
         this.value = value;
         this.tools = tools;
     }
- }
+}
 
- const idea1 = new Ideas ("Writing blogs.", 78, "WordPress");
+const idea1 = new Ideas ("Writing blogs.", 78, "WordPress");
 
- console.log(idea1);
+console.log(idea1);
 
 //  constructor object - the use of declarative functions to create objects 
 
