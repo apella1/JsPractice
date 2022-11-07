@@ -20,8 +20,8 @@ function getPosts() {
     setTimeout(() => {
         let output = '';
 
-        posts.forEach( (post, index) => { 
-            output += `<li>${post.title}</li>` 
+        posts.forEach( (post, index) => {      // the index parameter hasn't been used within the function 
+            output += `<li>${post.title}</li>`
         });
 
         document.body.innerHTML = output;
@@ -42,6 +42,10 @@ createPost({title: 'Post four', body: 'This is post four'}, getPosts);
 
 // Timers - setTimeout()
 
+function checkUpdates () {
+    console.log('Checking for updates');
+}
+
 setTimeout(checkUpdates, 1000); // setTimeout calls checkUpdates(callback function) after one second
 setInterval((count) => {
     return count++
@@ -54,6 +58,21 @@ function stopCheckingForUpdates() {
     clearInterval(updateIntervalId)
 }
 
+function myDisplay(text) {
+    console.log(text)
+}
+
+function firstDisplay() {
+    myDisplay('How are you doing?')
+}
+
+function secondDisplay() {
+    myDisplay('Will this be shown?')
+}
+
+
+firstDisplay();
+secondDisplay();
 
 // * Events
 // client-side js programs are almost universally event driven - waiting to respond to user action 
@@ -63,3 +82,7 @@ function stopCheckingForUpdates() {
 
 // * Network Events
 // server-side javascript 
+
+
+
+// when passing a function as an argument, no parenthesis is used.

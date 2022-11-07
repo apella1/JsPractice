@@ -1,6 +1,6 @@
 const age = 78;
 
-// initializing a variable. const cannot be initialized or be reassigned.
+// * initializing a variable. const cannot be initialized or be reassigned.
 let score;
 
 score = 7;
@@ -22,7 +22,7 @@ console.log(game);
 const numbers = new Array(2,3,5,7,11,13);
 console.log(numbers);
 
-const languages = ["English", "Kiswahili", "Java?", "French"];
+const languages = ["English", "Kiswahili", "Java", "French"];
 
 // this method of adding items to the array isn't effective as it's not easy to know the number of items in the array making the use of the push method effective
 languages[4] = "Croatian";
@@ -106,6 +106,8 @@ person.married = true;
 console.log(person);
 
 // creating arrays containing objects
+// the const keyword for arrays doesn't mean that the array is constant but rather the array has a constant reference in memory
+// the array can be manipulated using array methods however the array cannot be reassigned 
 
 const gameFootball = [
     {
@@ -135,6 +137,17 @@ const gameFootball = [
         wonChampionsLeague: false
     }
 ];
+
+// * Common code blocks for switch cases 
+
+switch (gameFootball.founded, gameFootball.founder) {
+    case gameFootball.founded >= 1950:
+    case gameFootball.founder === 'Andrea Pirlo':
+        console.log("The club is relatively young");
+        break;
+    default: 
+        console.log("The club is old");
+}
 
 // array methods practice 
 
@@ -215,11 +228,11 @@ for(let i = 0; i < 12; i++) {
 // while loops
 // todo: work on while loops 
 
-// let j = 0;
-// while (j = 0) {
-//     j+=;
-//     console.log(`While loop ${j}`);
-// }
+let j = 0;
+while (j = 0) {
+    j+=
+    console.log(`While loop ${j}`);
+}
 
 // looping through arrays
 // * using for loops 
@@ -243,7 +256,7 @@ for (let founder of gameFootball) {
     console.log(founder.founder);
 }
 
-// high order looping through arrays - forEach, map, filter
+// * High Order looping through arrays - forEach, map, filter
 
 gameFootball.forEach( (games) => {
     console.log(games);
