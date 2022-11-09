@@ -40,3 +40,47 @@ function findSolution(target) {
 console.log(findSolution(24));
 console.log(findSolution(11));
 console.log(findSolution(6));
+console.log(findSolution(89));
+
+// recursive function that prints numbers so long as the given conditions are met
+
+function numPrint (x) {
+    if(x > 0) {
+        return x
+    }
+    
+    numPrint(x - 1);
+}
+
+console.log(numPrint(7));
+
+// getting maximum call stack 
+
+const getMaxCallStack = (i) => {
+    try {
+        return getMaxCallStack(++i)
+    } catch (error) {
+        return i
+    }
+}
+
+console.log(getMaxCallStack(0));
+
+
+
+// Factorial function - a typical use  of recursive functions 
+
+const numFactorial = (x) => {
+    if (x === 0) {
+        return 1;
+    } else {
+        return x * numFactorial(x - 1)
+    }
+}
+
+console.log(numFactorial(10));
+
+// fibonacci 
+
+const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
+console.log(fibonacci(10));

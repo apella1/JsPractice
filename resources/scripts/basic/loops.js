@@ -43,3 +43,10 @@ console.log(text);
 // * While loop - loops through a block of code as long as a specified condition is true
 
 // * Do while loop - loops through a block of code once, and then repeats the loop as long as a specified condition is true
+
+const cars = ['Audi', 'BMW', 'Toyota'];
+
+for (let j = 0; j < cars.length; j++) {
+	console.log(cars[j]);
+}
+

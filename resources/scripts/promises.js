@@ -1,4 +1,5 @@
 // promises are objects that represent the not yet available results of an asynchronous operation
+// representing the eventual completion or failure of an asynchronous function 
 
 const posts = [
     {
@@ -55,7 +56,7 @@ const promise3 = new Promise( (resolve) => {
     setTimeout(resolve, 2000, 'Goodbye');
 });
 
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then( res => res.json())
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then( res => res.json());
 
 Promise.all([promise1, promise2, promise3]).then( (values) => { 
     console.log(values)
@@ -67,3 +68,5 @@ Promise.all([promise1, promise2, promise3]).then( (values) => {
 // * async / await
 // setTimeout runs once and forgets about the code. To write a function that updates regularly, setInterval is used instead
 // ? clearInterval
+
+

@@ -2,11 +2,12 @@
 
 // object
 
-const person = { 
-    firstName: 'Michael',
-    lastName: 'Jackson',
-    age: 50,
-}
+const person = {
+  firstName: "Peter",
+  lastName: "Thiel",
+  age: 58,
+  books: ["Now is the time", "Hello Tomorrow", "The Lean Startup"],
+};
 
 // string
 // when adding a number and a string, js will treat the number as a string 
@@ -29,3 +30,6 @@ console.log(y);
 
 console.log(typeof y);
 console.log(typeof(x));
+
+// symbol data type 
+// * the importance of symbols within the javascript environment 

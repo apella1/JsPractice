@@ -31,7 +31,7 @@ console.log(parseFloat(number));
 // BigInt - allows to represent integers with arbitrary precision
 
 let largeNumber = 77882882772662672772627738847838873n; // the n at the end is used to specify that it's a large number 
-let y = BigInt(7363748299237474774883399393993); // the number can also be passed around the BigInt keyword
+let y = BigInt(7363748299237474774883399393993); // the number can also be parsed around the BigInt keyword
 
 console.log(typeof(y));
 console.log(typeof largeNumber);
@@ -54,4 +54,6 @@ console.log(Number.isSafeInteger(7883));
 
 // Number.parseInt() and Number.parseFloat() works the same as parseInt() and parseFloat()
 
+console.log(Number.parseFloat(66))
+console.log(Number.parseInt(45.678)); // parseInt() truncates the value of the number 
 
