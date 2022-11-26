@@ -21,8 +21,10 @@ function multiplier(factor) {
     return number => number * factor
 }
 
+let double = multiplier(2);
 let thrice = multiplier(3);
 console.log(thrice(6));
+console.log(double(4));
 
 
 // a parameter is itself a local binding 
@@ -78,3 +80,14 @@ console.log(add6(5));
 // both add6 and add4 are closures which store different lexical environments i.e in add4, the value of x is 4
 // makeAdder is a function factory 
 
+
+/**
+ * todo extension functionalities to be included in vim
+ * todo emmet
+ * todo quokka equivalent 
+ * todo better comments equivalent 
+ * todo opening up the terminal while working on files 
+ * todo switching between different workspaces while working on the same folder project 
+ * todo vim go set up 
+ * todo vim java set up
+ * **/

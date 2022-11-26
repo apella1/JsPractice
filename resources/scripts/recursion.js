@@ -7,7 +7,7 @@ function power(base, exponent) {
     if (exponent === 0) {
         return 1
     }else {
-        return base * power(base, exponent -1)
+        return base * power(base, exponent - 1)
     }
 }
 
@@ -20,7 +20,7 @@ console.log(power(3, 3));
 // although any program can be made faster by making it bigger and more convoluted, the programmer must decide for a balance of both worlds. 
 // optimizing for speed and making the code human friendly for maintainability 
 
-// ? problem 
+// ? problem being tackled by the code piece below  
 
 function findSolution(target) { 
     function find(current, history) {
@@ -84,3 +84,4 @@ console.log(numFactorial(10));
 
 const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
 console.log(fibonacci(10));
+

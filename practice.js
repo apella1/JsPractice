@@ -5,29 +5,39 @@
 
 let todo1 = 1;
 let todo2 = "This is a variable containing a string";
+let sports = ['Football', 'Volleyball'];
 
 // javascript functions 
 // the below function is a declarative function where the function name is given and the parameters passed in
+// parameters are local bindings created by the function 
 
 function addTodo (todoName) { 
-    let element = document.createElement('section');  // creates a div element within the body of the markup
-    element.innerText = todoName;
-    document.body.appendChild(element);
+    let element = document.createelement('section');  // creates a div element within the body of the markup
+    element.innertext = todoname;
+    document.body.appendchild(element);
 }
 
-// the addTodo function creates an element and adds text to the body
-// ? innerText
-// ? appendChild
-// ! the hierarchy of the document object. 
-// * Every element in javascript is an object?  
+const newtodo = (todo) => {
+	let element = document.createelement('div');
+	element.innertext = todo;
+	document.appendchild(element);
+}
 
-// calling functions, also known as revoking functions 
+// the addtodo function creates an element and adds text to the body
+// ? innertext
+// ? appendchild - adds the created element to the body of the document i.e the html structure 
+// ! the hierarchy of the document object. 
+// * every element in javascript is an object - object is javascript data type. all the other data types can be objects when declared by the new keyword.
+
+// calling functions or revoking functions 
     console.log(addTodo(todo1));
     addTodo(todo2);
 
-// arrays can contain different data types within the same block. This is different compared to other languages as arrays only contain data of the same type as elements. 
+// arrays can contain different data types within the same block.
+// this is different for statically typed languages as the data types within the arrays are statically declared.
+// through typescript javascript allows for type declaration. 
 
-let todos = ["Magenta", "Portsmouth", 67, false, 98.433];
+let todos = ["Magenta", "Portsmouth", 'Blue', 67, false, 98.433];
 
 console.log(todos);
 
@@ -59,7 +69,9 @@ todos.forEach( (todoTitle) => {
 
 var firstName = "Peter";
 var age = 4;
-age = age + 1; // increments age by one 
+age = age + 1; // increments age by one - changing the value of the predefined variable.
+
+console.log(age);
 
 
 // indexing the characters of a string 
@@ -93,3 +105,19 @@ var myMessage = `My name is ${fullName} and I am ${age} years old.`;
 console.log(myMessage);
 
 console.log(document.getElementsByTagName('h1')); // displays the h1 elements selected 
+
+class Animal {
+	constructor(type, lifeSpan) {
+		this.type = type;
+		this.lifeSpan = lifeSpan;
+	}
+
+	animalSummary() {
+		return `${this.type} has a lifespan of ${this.lifeSpan} years.`
+	}
+}
+
+const dog = new Animal('Dog', 8)
+
+console.log(dog.animalSummary())
+
