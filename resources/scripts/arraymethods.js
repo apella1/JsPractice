@@ -4,13 +4,13 @@ const cars = ['Ford', 'Audi', 'BMW', 'Mercedes'];
 // an array of boy names
 const boyNames = ['John', 'Peter', 'Paul', 'Gladwell', 'Mandela'];
 
-boyNames.splice(3, 2);
+boyNames.splice(2, 2); // removing
 
 console.log(boyNames);
 
 const girlNames = ['May', 'June', 'Angela', 'Pauline'];
 
-const sliceGirls = girlNames.slice(0, 4);
+const sliceGirls = girlNames.slice(1, 3); // second value starts from index 0
 
 console.log(sliceGirls);
 
@@ -25,6 +25,10 @@ console.log(coolNames);
 // concatenating arrays - .concat()
 // joining two arrays 
 const allNames = girlNames.concat(boyNames);
+const otherNames = boyNames.concat(girlNames);
+allNames.sort();
+otherNames.sort();
+console.log(allNames == otherNames);
 
 // joining three arrays 
 const superNames = boyNames.concat(girlNames, coolNames);
@@ -42,13 +46,12 @@ items[items.length] = 'Item4'
 
 console.log(items);
 
-// const splicedItems = items.splice(1, 2);
+const splicedItems = items.splice(1, 2);
 
-const slicedItems = items.slice(2, 4);
-
+const slicedItems = items.slice(2, 1);
+console.log(slicedItems);
 console.log(slicedItems);
 
-// * slice starts from the defined index which is the first value within the braces then starts at index zero and moves towards the first defined index and then returns the values from that index to the last count.
 
 // document.querySelector('.item').innerHTML = items.join('~'); // ~ is the separator. querySelectorAll for all classes doesn't join for all the list elements with the class item
 
@@ -80,9 +83,7 @@ console.log(animals);
 
 // array splice and slice methods
 const subjects = ['Math', 'English', 'History', 'Science', 'Art', 'Music'];
-subjects.splice(1, 4, 'PE', 'SSD', 'KDD'); // *the first number shows from which index the array is to be spliced, the second number shows how many elements are to be removed, the third number shows how many elements are to be added
-
-// the first two numbers of the splice method show from which index we are starting to remove and from which we're ending. The values within the index boundaries are also included in the items that are removed from the array.  
+subjects.splice(1, 4, 'PE', 'SSD', 'KDD'); // * the second number shows how many elements are to be removed, the third parameter represents elements to be added
 
 console.log(subjects);  
 
@@ -91,12 +92,12 @@ const sliceSubjects = subjects.slice(2, 5);
 console.log(sliceSubjects);
 
 const tools = ['Hammer', 'Saw', 'Screwdriver', 'Pliers', 'Wrench'];
-tools.splice(0, 5); // * removes the first 5 elements from the array
+tools.splice(0, 2); // * removes the first 5 elements from the array
 
 console.log(tools);
 
 const fruits = ['Apple', 'Banana', 'Orange', 'Pear', 'Grape'];
-const citrus = fruits.slice(1, 3); // * the first number shows from which index the array is to be sliced, the second number shows until which index the array is to be sliced
+const citrus = fruits.slice(2, 3); 
 console.log(citrus);
 
 // ! all javascript methods have .toString() method - this method converts the array into a string
@@ -110,14 +111,14 @@ console.log(citrus);
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 numbers.reverse();
-
-numbers.sort(); // sorts the array in ascending order based on the fist character e.g 243 comes before 90
+console.log(numbers)
+numbers.sort(); 
+// sorts the array in ascending order based on the fist character e.g 243 comes before 90
 
 console.log(numbers);
 
 
 // includes method 
-
 const hasSeven = numbers.includes(7);
 
 console.log(hasSeven);
@@ -199,7 +200,6 @@ const itemNames = products.map( (item) => {
  console.log(withPrice700);
 
  // forEach
-
 products.forEach( (item) => {
     console.log(item.name);
 })
@@ -227,6 +227,11 @@ const expensiveInventory = products.every( (item) => {
     return item.price >= 100 
 })
 
+const inexpensiveProduct = products.filter(item => {
+    return item.price <= 100
+})
+
+console.log(inexpensiveProduct)
 console.log(expensiveInventory);
 
 // * reduce method. takes in two parameters and works out the specified operations such as the sum
@@ -239,9 +244,9 @@ console.log(totalPrice);
 
 const nameString = products.reduce( (item, product) => { 
     return item + product.name
-}, '')
+}, ' ')
 
-console.log(nameString);   // * the strings are also combined. The second parameter is the one responsible for looping through each of the array components
+console.log(nameString);  
 
 // includes method
 
