@@ -18,5 +18,9 @@ const halfNum = (num) => {
 
 num = 30;
 
-console.log(halfNum(10));
+console.log(halfNum(10, true, undefined, 'hello')); // optional arguments
 console.log(num)
+
+person = {}
+
+console.log(typeof person)
