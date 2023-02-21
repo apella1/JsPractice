@@ -70,7 +70,7 @@ console.log(vehicleName);
 
 // escaping characters
 
-var textItem = 'The dog said to its fried,"Hey, how are you doing?"';
+var textItem = 'The dog said to its friend,"Hey, how are you doing?"';
 
 // creating a new line
 

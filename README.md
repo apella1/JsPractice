@@ -1,6 +1,6 @@
-# JavaScript Fundamentals
+# JavaScript
 
-This is where I practice my vanilla JavaScript.
+This is my JavaScript playground.
 
 ## Concepts Covered
 
@@ -12,12 +12,13 @@ This is where I practice my vanilla JavaScript.
 - Closures
 - Classes
 - Higher Order Array Methods (map, forEach, filter)
+- Hoisting
 
 ## ToDo
 
-- Lexical structure
+- Lexical Structure
 - Expressions
-- this
-- Strict mode
+- this keyword
+- Strict Mode
 - Callbacks
-- The event loop
+- The Event Loop
