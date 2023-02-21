@@ -1,7 +1,13 @@
-// interpreter lifting declarations(variables, functions, classes) at the top of their scope before execution
+/* 
+	interpreter lifting declarations(variables, functions, classes)
+	 at the top of their scope before execution
+	*
+ */
 
-
-// scenario 1 - using values(functions before they are declared) - function, function*, async function*. async function*
+/* 
+  scenario 1 - using values(functions before they are declared) 
+  - function, function*, async function*. async function*
+ */
 
 asyncCall(); // expected output ~ 'resolved'
 console.log(addNumbers(5, 8)) // using addNumbers and asyncCall before they're declared
@@ -26,7 +32,10 @@ async function asyncCall() {
 	console.log(result)
 }
 
-//  scenario 2 - referencing a variable in its scope before it is declared(undefined instead of throwing a reference error)
+/* 
+ 	scenario 2 - referencing a variable in its scope before it is declared(undefined
+	instead of throwing a reference error)
+ */
 
 let x = 1
 

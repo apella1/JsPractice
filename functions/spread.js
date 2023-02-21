@@ -12,7 +12,7 @@ const obj = { ...array };
 
 console.log(obj);
 
-// nullish coalescing assignment
+//* nullish coalescing assignment
 const a = { duration: 50 };
 
 a.duration ??= 10;
