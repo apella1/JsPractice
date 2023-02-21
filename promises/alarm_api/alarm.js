@@ -23,8 +23,11 @@ function alarm(person, delay) {
 }
 
 
-alarmButton.addEventListener('click', () => {
-    alarm(personName.value, delay.value)
-        .then((message) => messageOutput.textContent = message)
-        .catch((error) => messageOutput.textContent = `Couldn't server alarm: ${error}`)
+alarmButton.addEventListener('click', async () => {
+    try {
+        const message = await alarm(personName.value, delay.value);
+        messageOutput.textContent = message;
+    } catch (error) {
+        messageOutput.textContent = `Couldn't set alarm: ${error}`
+    }
 })
