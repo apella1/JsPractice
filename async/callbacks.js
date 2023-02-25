@@ -28,35 +28,33 @@ function doOperation() {
 
 doOperation();
 
-
 // having callbacks
 
 function add1(init, callback) {
-    const result = init + 1;
-    callback(result);
-  }
-  
-  function add2(init, callback) {
-    const result = init + 2;
-    callback(result);
-  }
-  
-  function add3(init, callback) {
-    const result = init + 3;
-    callback(result);
-  }
-  
+  const result = init + 1;
+  callback(result);
+}
+
+function add2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+
+function add3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+
 // ! callback hell or the pyramid of doom
 
-  function completeOperation() {
-    add1(0, (result1) => {
-      add2(result1, (result2) => {
-        add3(result2, (result3) => {
-          console.log(`result: ${result3}`);
-        });
+function completeOperation() {
+  add1(0, (result1) => {
+    add2(result1, (result2) => {
+      add3(result2, (result3) => {
+        console.log(`result: ${result3}`);
       });
     });
-  }
-  
-  completeOperation();
-  
+  });
+}
+
+completeOperation();

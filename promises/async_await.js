@@ -1,18 +1,20 @@
 /* Using await within a function to bind a promise to a variable */
-    
-fetchProducts() // * hoisting the async function declaration 
+
+fetchProducts(); // * hoisting the async function declaration
 
 async function fetchProducts() {
-    try {
-        const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
-        if (!response.ok) {
-            throw new Error(`Http Error: ${response.status}`)
-        }
-        const data = await response.json()
-        console.log(data[0].type);
-    } catch (error) {
-        console.error(`Could not get products: ${error.status}`)
+  try {
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+    );
+    if (!response.ok) {
+      throw new Error(`Http Error: ${response.status}`);
     }
+    const data = await response.json();
+    console.log(data[0].type);
+  } catch (error) {
+    console.error(`Could not get products: ${error.status}`);
+  }
 }
 
 /* 
@@ -22,15 +24,13 @@ async function fetchProducts() {
 
     * A solution to this would be 
    const promise = fetchProducts()
-    promise.then((date) => console.log(data[index].property))
+    promise.then((data) => console.log(data[index].property))
  */
 
-
-// Concept Retrieval 
-/* 
-    * Function definition vs function declaration
+// Concept Retrieval
+/*
+ * Function definition vs function declaration
  */
-
 
 // ! Interesting Facts
 // await keyword can only be used within an async function or within a module
